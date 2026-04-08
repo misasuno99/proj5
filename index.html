@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa do Mundo - Site Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="trophy">🏆</span>
+                <h1>Copa do Mundo</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#grupos">Grupos</a></li>
+                <li><a href="#jogos">Jogos</a></li>
+                <li><a href="#tabela">Tabela</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Bem-vindo à Copa do Mundo</h2>
+            <p>O maior espetáculo do futebol mundial</p>
+            <div class="countdown">
+                <h3>Próximo Jogo em:</h3>
+                <div class="timer">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <small>Dias</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <small>Horas</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <small>Minutos</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <small>Segundos</small>
+                    </div>
+                </div>
+            </div>
+            <button class="cta-button">Comprar Ingressos</button>
+        </div>
+        <div class="soccer-ball"></div>
+    </section>
+
+    <!-- Grupos Section -->
+    <section id="grupos" class="groups-section">
+        <h2>Grupos da Copa</h2>
+        <div class="groups-container">
+            <div class="group-card">
+                <h3>Grupo A</h3>
+                <ul class="team-list">
+                    <li><span class="flag">🇧🇷</span> Brasil</li>
+                    <li><span class="flag">🇦🇷</span> Argentina</li>
+                    <li><span class="flag">🇫🇷</span> França</li>
+                    <li><span class="flag">🇩🇪</span> Alemanha</li>
+                </ul>
+            </div>
+            <div class="group-card">
+                <h3>Grupo B</h3>
+                <ul class="team-list">
+                    <li><span class="flag">🇪🇸</span> Espanha</li>
+                    <li><span class="flag">🇵🇹</span> Portugal</li>
+                    <li><span class="flag">🇮🇹</span> Itália</li>
+                    <li><span class="flag">🇬🇧</span> Inglaterra</li>
+                </ul>
+            </div>
+            <div class="group-card">
+                <h3>Grupo C</h3>
+                <ul class="team-list">
+                    <li><span class="flag">🇳🇱</span> Holanda</li>
+                    <li><span class="flag">🇧🇪</span> Bélgica</li>
+                    <li><span class="flag">🇭🇷</span> Croácia</li>
+                    <li><span class="flag">🇺🇾</span> Uruguai</li>
+                </ul>
+            </div>
+            <div class="group-card">
+                <h3>Grupo D</h3>
+                <ul class="team-list">
+                    <li><span class="flag">🇲🇽</span> México</li>
+                    <li><span class="flag">🇨🇴</span> Colômbia</li>
+                    <li><span class="flag">🇯🇵</span> Japão</li>
+                    <li><span class="flag">🇰🇷</span> Coreia do Sul</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jogos Section -->
+    <section id="jogos" class="matches-section">
+        <h2>Próximos Jogos</h2>
+        <div class="matches-container">
+            <div class="match-card">
+                <div class="match-date">15/06/2026 - 16:00</div>
+                <div class="match-teams">
+                    <div class="team">
+                        <span class="flag">🇧🇷</span>
+                        <span class="team-name">Brasil</span>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="team">
+                        <span class="team-name">Argentina</span>
+                        <span class="flag">🇦🇷</span>
+                    </div>
+                </div>
+                <div class="match-stadium">Estádio Nacional - Brasília</div>
+                <button class="vote-btn" onclick="voteMatch(1)">Votar</button>
+            </div>
+            <div class="match-card">
+                <div class="match-date">16/06/2026 - 18:00</div>
+                <div class="match-teams">
+                    <div class="team">
+                        <span class="flag">🇫🇷</span>
+                        <span class="team-name">França</span>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="team">
+                        <span class="team-name">Alemanha</span>
+                        <span class="flag">🇩🇪</span>
+                    </div>
+                </div>
+                <div class="match-stadium">Maracanã - Rio de Janeiro</div>
+                <button class="vote-btn" onclick="voteMatch(2)">Votar</button>
+            </div>
+            <div class="match-card">
+                <div class="match-date">17/06/2026 - 20:00</div>
+                <div class="match-teams">
+                    <div class="team">
+                        <span class="flag">🇪🇸</span>
+                        <span class="team-name">Espanha</span>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="team">
+                        <span class="team-name">Portugal</span>
+                        <span class="flag">🇵🇹</span>
+                    </div>
+                </div>
+                <div class="match-stadium">Arena Corinthians - São Paulo</div>
+                <button class="vote-btn" onclick="voteMatch(3)">Votar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabela Section -->
+    <section id="tabela" class="table-section">
+        <h2>Tabela de Classificação</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Seleção</th>
+                        <th>P</th>
+                        <th>J</th>
+                        <th>V</th>
+                        <th>E</th>
+                        <th>D</th>
+                        <th>SG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><span class="flag">🇧🇷</span> Brasil</td>
+                        <td>9</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>+7</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><span class="flag">🇫🇷</span> França</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>+4</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><span class="flag">🇦🇷</span> Argentina</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>-1</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><span class="flag">🇩🇪</span> Alemanha</td>
+                        <td>0</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>3</td>
+                        <td>-10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Notícias Section -->
+    <section id="noticias" class="news-section">
+        <h2>Últimas Notícias</h2>
+        <div class="news-container">
+            <article class="news-card">
+                <div class="news-image">⚽</div>
+                <div class="news-content">
+                    <h3>Brasil se prepara para estreia na Copa</h3>
+                    <p>Seleção brasileira realiza último treino antes do grande jogo contra a Argentina.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div class="news-image">🏆</div>
+                <div class="news-content">
+                    <h3>França é favorita segundo especialistas</h3>
+                    <p>Análises apontam os franceses como um dos principais candidatos ao título.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div class="news-image">🎟️</div>
+                <div class="news-content">
+                    <h3>Ingressos esgotados em tempo recorde</h3>
+                    <p>Demanda por ingressos supera todas as expectativas para a Copa do Mundo.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Copa do Mundo</h3>
+                <p>O maior evento esportivo do planeta</p>
+                <div class="social-links">
+                    <a href="#">📘</a>
+                    <a href="#">🐦</a>
+                    <a href="#">📷</a>
+                    <a href="#">📺</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#grupos">Grupos</a></li>
+                    <li><a href="#jogos">Jogos</a></li>
+                    <li><a href="#tabela">Tabela</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: contato@copadomundo.com</p>
+                <p>Tel: +55 11 99999-9999</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Copa do Mundo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
